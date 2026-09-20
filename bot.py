@@ -639,11 +639,14 @@ def main():
     app.add_handler(topup_conv)
 
     async def on_startup(application):
-        await application.bot.send_message(
-            chat_id=ADMIN_ID,
-            text="🟢 <b>Bot is now online!</b>\n\nDataLine Store bot started.",
-            parse_mode="HTML"
-        )
+        try:
+            await application.bot.send_message(
+                chat_id=ADMIN_ID,
+                text="🟢 <b>Bot is now online!</b>\n\nDataLine Store bot started.",
+                parse_mode="HTML"
+            )
+        except Exception as e:
+            print(f"Note: Could not notify admin: {e}")
 
     app.post_init = on_startup
     print("🤖 Bot is running!")
