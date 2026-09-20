@@ -15,7 +15,7 @@ from telegram.ext import (
 )
 
 # --- CONFIG ---
-BOT_TOKEN   = "7687131149:AAGZwUSOtsqj4JycwgOrHYmjMJOrtzwCjIk"
+BOT_TOKEN   = "8578304775:AAHAL8ysmZFKGuZT_s3QGVNzvKxrPuIot9E"
 ADMIN_ID    = 8798542436
 STORE_URL   = "https://telegram.me/datalaunch_bot"
 
